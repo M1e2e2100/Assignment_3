@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="Resume">
+    <div class="title">
+        <h2 class="box" >EDUCATION</h2>
+    </div>
+    <div class="descp">
+        <h3> New Jersey Institute of Technology</h3>
+        <p class="italic">Masters in Computer Science - Newark,NJ         ~ May 2024</p>
+        <p></p>
+        <h3>Vellore Institute of Technology</h3>
+        <p class="italic"> Bachelor of Technology in Computer Science - Chennai, India         ~ May 2022</p>
+        <p></p>
+    </div>
+</div>
+
+<div class="Resume">
+    <div class="title">
+        <h2 class="box" >EXPERIENCE</h2>
+    </div>
+    <div class="descp">
+        <h3> Tata Consultancy Services </h3>
+        <p class="italic">Software Developer ~ May 2022-July 2023</p>
+        <ul>
+            <li>Contributed to the development and testing of websites</li>
+            <li>Worked closely with senior developers to troubleshoot and debug code.</li>
+            <li>Participated in Agile development process and sprint planning meetings.</li>
+        </ul>
+        <p></p>
+    </div>
+</div>
+
+<div class="Resume">
+    <div class="title">
+        <h2 class="box" >SKILLS</h2>
+    </div>
+    <div class="list">
+        <div class="box" > Data Structures </div>
+        <div class="box" > Algorithms </div>
+        <div class="box" > Problem Solving </div>
+        <div class="box" > Agile Development </div>
+        <div class="box" > Time Management </div>
+        <div class="box" > Cloud Computing </div>
+        <div class="box" > Computer Networking </div>
+        <div class="box" > Leadership </div>
+    </div>
+</div>
+
+<div class="Resume">
+    <div class="title">
+        <h2 class="box">TECHNOLOGIES</h2>
+    </div>
+    <div class="descp">
+        <table>
+            <tr>
+                <td><b>Languages:</b></b></td>
+                <td>C | C++ | Java | HTML | CSS | Python | JavaScript</td>
+            </tr>
+            <tr>
+                <td><b>Web Technologies:</b></td>
+                <td>JavaScript | Express.js | React.js | Node.js | Swift</td>
+            </tr>
+            <tr>
+                <td><b>Machine Learning:</b></td>
+                <td>Pandas | OpenCV | TensorFlow | Keras | Numpy</td>
+            </tr>
+            <tr>
+                <td><b>Cloud Technologies:</b></td>
+                <td>AWS | Docker | Firebase | GCP | Azure</td>
+            </tr>
+            <tr>
+                <td><b>Database Management:</b></td>
+                <td> MySQL | MongoDB | NoSQL | PostgreSQL</td>
+            </tr>
+            <tr>
+                <td><b>Application Software:</b></td>
+                <td> Visual Studio Code | GitHub | Android Studio</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="Project">
+    <div class="title">
+        <h2 class="box" >PROJECT EXPERIENCE</h2>
+    </div>
+    <div class="descp">
+        {% for projects in Project %}
+        <h3>{{projects.name}} </h3>
+        <ul>
+            <li>{{projects.d1}}</li>
+            <li>{{projects.d2}}</li>
+        </ul>
+        <p></p>
+        {% endfor %}
+    </div>
+
+</div>
+
+<div class="Contact">
+    <h2>Contact Me!</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  {% endblock content %}

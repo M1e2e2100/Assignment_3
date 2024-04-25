@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meena Resume</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+</head>
+<body>
+    <div class="Summary", style="background-color: peachpuff;">
+
+        <h1 class="head"> Hello, I'm Meena R.</h1>
+        <div class="p">
+            <p>A Masters in Computer Science student in New Jersey, USA. Software Engineer with 2 years of full stack web development experience specializing in Ruby on Rails and PostgreSQL.</p> 
+            <p> Domain expert in e-commerce and payments field as a result of working at multiple e-commerce companies.</p>
+            <p><a href="mailto:meena.r@yahoo.com">meena.r@yahoo.com</a></p>
+            <p><a href="tel:(123) 456-7890">(123) 456-7890</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        {% block content %}
+
+
+        {% endblock content %}
+     </div>
+
+
+</body>
+</html>

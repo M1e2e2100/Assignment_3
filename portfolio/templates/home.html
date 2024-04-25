@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="Resume">
+    <div class="title">
+        <h2 class="box" >RESUME</h2>
+    </div>
+    <div class="list">
+        <div class="box" ><a href="{% url 'about' %}">About</a> </div>
+        <div class="box" ><a href="{% url 'portfolio' %}">Portfolio </div>
+    </div>
+</div>
+
+{% endblock content %}
